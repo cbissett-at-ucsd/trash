@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  web-server:
+    build:
+      context: ./web
+    ports:
+      - 6666:6666 # host : container
+
+    container_name: dummyGETPUT
