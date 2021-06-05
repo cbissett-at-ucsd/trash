@@ -6,6 +6,8 @@ services:
     build:
       context: ./web
     ports:
-      - 6666:6666 # host : container
+      - 6543:6543 # host : container
+    volumes:
+      - ./web/src:/app
 
-    container_name: dummyGETPUT
+    container_name: dummybass
