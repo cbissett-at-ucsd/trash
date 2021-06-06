@@ -12,15 +12,17 @@ import json
 
 def hello_world(request):
     return Response("hello")
-
+i=0
 def double(req):
     print(req.text)
+    print(req.content)
     #page_data = req.GET.mixed()
     #num=int(page_data['id'])
     #print(num)
     #num=num*2
     #print(num)
-    return Response('2')
+    i=i+1
+    return Response(str(i))
 
 def get_form(req):
     return render_to_response('form.html', {}, request=req)
