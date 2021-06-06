@@ -20,7 +20,7 @@ def double(req):
     #print(num)
     #num=num*2
     #print(num)
-    return Response(2)
+    return Response('2')
 
 def get_form(req):
     return render_to_response('form.html', {}, request=req)
