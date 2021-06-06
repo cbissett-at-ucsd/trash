@@ -7,8 +7,7 @@ import requests
 import os
 import json
 
-
-
+from random import *
 
 def hello_world(request):
     return Response("hello")
@@ -17,7 +16,7 @@ def double(req):
     page_data = req.GET.mixed()
     print("extracted ID")
     print(int(page_data['id']))
-    return Response('12345')
+    return Response(str(randint(0,1)))
 
 def get_form(req):
     return render_to_response('form.html', {}, request=req)
