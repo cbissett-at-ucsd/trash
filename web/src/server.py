@@ -14,12 +14,13 @@ def hello_world(request):
     return Response("hello")
 
 def double(req):
-    page_data = req.GET.mixed()
-    num=int(page_data['id'])
-    print(num)
-    num=num*2
-    print(num)
-    return Response(str(num))
+    print(req.text)
+    #page_data = req.GET.mixed()
+    #num=int(page_data['id'])
+    #print(num)
+    #num=num*2
+    #print(num)
+    return Response(2)
 
 def get_form(req):
     return render_to_response('form.html', {}, request=req)
